@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap'); /* aqui se extrae la fuente */
+@import url('/actividad/menu.css');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* aqui se pondra la fuente */
+body{
+    font-family: 'Open Sans', sans-serif; 
+}
+
+/* Este sera el fondo de la pagina */
+#demo {
+    background: #D0E4F5 url("https://cdn.wallpapersafari.com/43/52/kFTySw.jpg") repeat scroll -33px -50px;
+    }
+
+/* Aqui se modifica el header, es lo que estara arriba, se alinea, se pone el fondo y la posicion y se fija */
+header {
+        text-align: center;
+        width: 100%;
+        height: 55px;
+        background: rgb(52, 52, 80);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+}
+
+/* Este es el banner de inicio, aqui fijamos por debajo del header para que se pueda ver */
+#banner {
+    margin-top: 55px;
+}
+/* Aqui le decimos al banner que su tamaño siempre se ajuste al tamaño de la pantalla */
+#banner img {
+    width: 100%;
+    height: 100%;
+}
+/* Aqui se coloca un texto en el contenedor del banner, lo acomodamos y le damos transparencia */
+#banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    transform: translateX(-30%) translateY(-80%);
+    color: white;
+    background-color: #38628600;
+}
+/* Con media, dependiendo del tamaño, modificamos el tamaño de la letra del banner */
+@media (min-width:700px){
+    #banner .contenedor{
+    font-size: 50px;
+    }
+}
+
+/* Aqui acomodamos las imagenes, la movemos a la izquierda debido a que esta en una lista, y la ajustamos al contenedor */
+#lista img {
+    transform: translateX(0px);
+    width: 100%;
+}
+/* Le damos un tamaño y un margen automatico a los contenedores */
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+/* A todos los h1 los separamos del header */
+h1 {
+        margin-top: 55px;
+}
+
+/* cuando el tamaño de la pantalla supera los 1000 pixeles, de le cambia el color de la fuente y el fondo y se le asigna un tamaño al ancho de lo escrito */
+    @media (min-width:1000px){
+    .contenedor {
+        color: black;
+        width: 1000PX;
+        background: white;
+        
+    }
+}
+
+/* Se alinea el texto de los actores a las fotos */
+#actores {
+    text-align: center;
+}
+/* las fotos pueden moverse, quedan centradas y se le da transparencia al contenedor, cambio de color de fuente */
+#actores .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #38628600;
+    color: white;
+}
+/* optienen un margen las fotos */
+.fotos {
+    margin: 20px;
+}
+/* los archivos de las fotos se les asigna un tamaño, borde y se les da forma redondeada */
+.fotos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 7px solid white;
+}
+/* aqui se modifican los botones */
+#boton a {
+    width: 100px;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 7px;
+    background-color: #38628600;
+    border: 3px solid red;
+}
+/* Se centran los botones para que esten alineados */
+.a {
+    transform: translateY(100%);
+    text-align: left;
+}
+/* Se centran los botones para que esten alineados */
+.b {
+    text-align: center;
+}
+/* Se centran los botones para que esten alineados */
+.c {
+    transform: translateY(-100%);
+    text-align: right;
+}
+/* Cuando el texto aumenta, cambian los botones de color */
+@media (min-width:1000px){
+    #boton a{
+        color: black; 
+        background-color: #38628600;
+        border: 3px solid black;
+    }
+}
+
+header.contenedor{
+    display: table;
+}
+
+.titulo a{
+    float: inline-start;
+}
+
+@media (min-width:1000px){
+    .boton a{
+        color: black; 
+        background-color: #38628600;
+        border: 3px solid black;
+    }
+}
